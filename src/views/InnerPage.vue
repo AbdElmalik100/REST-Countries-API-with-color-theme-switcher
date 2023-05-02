@@ -108,6 +108,8 @@ onMounted(async () => {
         .then(data => {
             loading.value = false
             countryDetails.value = data
+            countryDetails.value[0].name.common === 'Egypt' ?
+                countryDetails.value[0].borders = countryDetails.value[0].borders.filter(el => el !== "ISR") : '' // Fuck Israel Again 
         })
 })
 </script>
