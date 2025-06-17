@@ -113,7 +113,7 @@ const loadMoreBtn = () => {
 
 onMounted(async () => {
     loading.value = true
-    await fetch('https://restcountries.com/v3.1/all')
+    await fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags,subregion,languages,tld,currencies,borders')
         .then(response => response.json())
         .then(data => {
             loading.value = false
